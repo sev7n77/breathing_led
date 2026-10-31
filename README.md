@@ -6,8 +6,8 @@ RoboMaster 算法组与电控组联调作业。视觉端通过 C++ 计算正弦�
 本项目主要在以下软硬件环境中开发与测试通过：
 
 ### 软件环境
-- **宿主操作系统**：Windows 10 / 11
-- **虚拟化环境**：WSL 2 (Ubuntu 22.04 LTS / 20.04 LTS)
+- **宿主操作系统**：Windows 11
+- **虚拟化环境**：WSL 2 (Ubuntu 22.04 LTS )
 - **开发工具**：CLion + CMake
 - **编程语言**：C++ 17
 - **通信依赖**：Linux `termios` 库、`usbipd-win` (用于 WSL 2 USB透传)
