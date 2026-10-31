@@ -17,7 +17,7 @@ void handle_sigint(int) { keep_running = 0; }
 int main(int argc, char** argv) {
     bool preview_mode = false;
     bool hex_mode = false;
-    const char* dev = "/dev/ttyUSB0";   // 嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻
+    const char* dev = "/dev/ttyUSB0";   // 嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻^_^此处可修改
 
     // 简单解析命令行参数
     for (int i = 1; i < argc; i++) {
