@@ -12,7 +12,6 @@ RoboMaster 算法组与电控组联调作业。视觉端通过 C++ 计算正弦�
 - **编程语言**：C++ 17
 - **通信依赖**：Linux `termios` 库、`usbipd-win` (用于 WSL 2 USB透传)
 
----
 
 ## ✨ 功能特性
 - **平滑呼吸**：使用绝对时间 `std::chrono` 和正弦公式 `127.5 * (1 - cos(2πt/T))` 计算亮度，无时间累积漂移。
@@ -57,7 +56,6 @@ make
 ./breathing_led --hex
 ```
 
----
 ## 🧪 本地自测详细方法（无实体硬件）
 ### **方法一**：终端彩色色块预览（验证呼吸算法）
 在终端执行：
@@ -108,7 +106,6 @@ hexdump -C /dev/pts/4
 ```bash
 xxd -c 4 /dev/pts/4
 ```
----
 ## 🛠️ 实际联调 （ WSL 2 挂载 USB 串口设备流程 ）
 
 在 Windows 下使用 WSL 2 开发时，默认无法直接访问 USB 设备。需要通过 `usbipd-win` 将 Windows 上的串口设备“透传”给 WSL。
@@ -160,7 +157,7 @@ const char* dev = "/dev/ttyUSB0"; // 也可能是 /dev/ttyACM0
 ```
 保存并重新编译，即可正常通信。
 
----
+
 ## 🚑 USB 透传常见坑点排查 (FAQ)
 - **/dev/ttyUSB0 出现又瞬间消失？**  
 这是 Ubuntu 22.04 的 brltty（盲文显示器驱动）服务误抢了 CH340 串口。直接在 WSL 终端执行 sudo apt remove brltty 卸载该服务，然后重新执行 attach。
